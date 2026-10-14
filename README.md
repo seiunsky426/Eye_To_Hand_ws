@@ -1,4 +1,4 @@
-# Eye_To_Hand_ws：RS1／RS3 与 Piper 标定
+# Eye_To_Hand_ws：双相机 与 Piper 标定
 
 完整操作见 [piper_eye_to_hand_calibration README](src/piper_eye_to_hand_calibration/README.md)。
 
