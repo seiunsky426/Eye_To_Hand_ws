@@ -1,0 +1,20 @@
+{
+  "backup": "/home/zhengsihze/Eye_To_Hand_cleanup_backups/20261014T035240.976285Z",
+  "archive_verified": true,
+  "removed_after_hash_check": [
+    "src/rekep_moveit_preview",
+    "runtime",
+    "build",
+    "devel",
+    "install",
+    ".vscode",
+    "src/piper_eye_to_hand_calibration/launch/calibrate_rs2_standalone.launch",
+    "src/piper_eye_to_hand_calibration/launch/calibrate_rs3_standalone.launch",
+    "src/piper_eye_to_hand_calibration/launch/publish_dual_results.launch"
+  ],
+  "legacy_intrinsics": "/home/zhengsihze/Eye_To_Hand_ws/Calculation Results/legacy_intrinsics/20261014_before_640x480",
+  "historical_results_preserved": true,
+  "validation_report": "VALIDATION.md",
+  "preserved_historical_result_files": 13,
+  "preserved_legacy_intrinsic_profiles": 3
+}

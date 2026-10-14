@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: piper-eye-to-hand-calibration
+Version: 0.1.0
+Summary: ROS intrinsics, manual 5+1 stereo, Piper RS1 handeye and extrinsic composition.
+Home-page: UNKNOWN
+Author: 
+Maintainer: Workspace Maintainer
+Maintainer-email: maintainer@example.com
+License: Apache-2.0
+Description: UNKNOWN
+Platform: UNKNOWN

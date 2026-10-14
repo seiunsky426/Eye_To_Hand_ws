@@ -1,0 +1,12 @@
+<launch>
+  <arg name="camera"/>
+  <arg name="camera_serial"/>
+  <arg name="result_file"/>
+
+  <node pkg="piper_eye_to_hand_calibration" type="static_tf_publisher_node.py"
+        name="$(arg camera)_eye_to_hand_static_tf" output="screen" required="true">
+    <rosparam param="result_files" subst_value="true">["$(arg result_file)"]</rosparam>
+    <rosparam param="expected_cameras" subst_value="true">["$(arg camera)"]</rosparam>
+    <rosparam param="expected_serials" subst_value="true">["$(arg camera_serial)"]</rosparam>
+  </node>
+</launch>

@@ -1,0 +1,48 @@
+# RS3 active file-based intrinsic calibration
+# Original 50-frame archive is preserved unchanged.
+camera: rs3
+camera_serial_number: "934222070377"
+camera_model: Intel RealSense Depth Camera 435
+calibration_time: "2026-09-10T18:51:07+08:00"
+calibration_target: "chessboard, 8x11 inner corners, 0.025 m square size"
+source_archive: /home/zhengsihze/camera_neican/20260910_185107_934222070377_640x360_raw_calibrationdata.tar.gz
+source_archive_sha256: "5768ea6ad428a3606837e7f8e26561f4640b0cf23f17d2ac72a467b6aba2a67a"
+source_record: /home/zhengsihze/camera_neican/20260910_185107_934222070377_640x360_filtered44.yaml
+status: PROVISIONAL
+quality:
+  original_sample_count: 50
+  retained_sample_count: 44
+  excluded_samples:
+    - left-0000.png
+    - left-0001.png
+    - left-0009.png
+    - left-0013.png
+    - left-0018.png
+    - left-0038.png
+  reprojection_rms_px: 0.243538901922
+  median_per_image_rms_px: 0.160137474537
+  maximum_per_image_rms_px: 0.579459428787
+  maximum_point_error_px: 1.653761267662
+  accepted_for_current_rs3_use: true
+  selected_at: "2026-09-10T19:50:49+08:00"
+  independently_validated: false
+  note: "Six motion-blurred or gross-residual samples removed; physical validation remains required."
+image_width: 640
+image_height: 360
+distortion_model: plumb_bob
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [449.84348133727, 0, 306.760211496775, 0, 449.927896453159, 172.868435069587, 0, 0, 1]
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.13626176061448, -0.254976906814024, -0.00108812496107583, -0.00313421294191402, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [450.795150115261, 0, 302.601276162941, 0, 0, 458.944689808549, 172.606968087934, 0, 0, 0, 1, 0]

@@ -1,0 +1,13 @@
+<launch>
+  <!-- Invalid mode is rejected during launch parsing, before starting cameras. -->
+  <arg name="mode" default="both"/>
+  <arg name="selected" value="$(eval {'rs1': 'rs1', 'rs3': 'rs3', 'both': 'both'}[arg('mode')])"/>
+  <include if="$(eval arg('selected') in ['rs1', 'both'])" file="$(find piper_eye_to_hand_calibration)/launch/camera.launch">
+    <arg name="camera" value="rs1"/>
+    <arg name="serial" value="346522071783"/>
+  </include>
+  <include if="$(eval arg('selected') in ['rs3', 'both'])" file="$(find piper_eye_to_hand_calibration)/launch/camera.launch">
+    <arg name="camera" value="rs3"/>
+    <arg name="serial" value="934222070377"/>
+  </include>
+</launch>

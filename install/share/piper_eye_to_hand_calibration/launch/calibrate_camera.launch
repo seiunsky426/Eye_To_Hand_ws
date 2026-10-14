@@ -1,0 +1,65 @@
+<launch>
+  <arg name="camera" default="rs1"/>
+  <arg name="camera_serial" default="346522071783"/>
+  <arg name="stereo_result"/>
+
+  <arg name="robot_pose_topic" default="/end_pose"/>
+  <arg name="base_frame" default="arm_base"/>
+  <arg name="camera_frame" default="$(arg camera)_color_optical_frame"/>
+  <arg name="camera_link_frame" default="$(arg camera)_link"/>
+  <arg name="image_topic" default="/$(arg camera)/color/image_raw"/>
+  <arg name="camera_info_topic" default="/$(arg camera)/color/camera_info"/>
+  <arg name="intrinsics_file"/>
+  <arg name="result_dir" default="$(env HOME)/Eye_To_Hand_ws/Calculation Results/handeye"/>
+
+  <arg name="marker_id" default="18"/>
+  <arg name="marker_size_m" default="0.100"/>
+  <arg name="max_reprojection_error_px" default="2.0"/>
+  <arg name="min_samples" default="15"/>
+  <arg name="sync_slop_sec" default="0.05"/>
+  <arg name="max_pair_age_sec" default="0.5"/>
+
+  <group ns="$(arg camera)/eye_to_hand">
+    <node pkg="piper_eye_to_hand_calibration" type="aruco_detector_node.py"
+          name="aruco_detector" output="screen" required="true">
+      <param name="camera" value="$(arg camera)" type="str"/>
+      <param name="camera_serial" value="$(arg camera_serial)" type="str"/>
+      <param name="camera_frame" value="$(arg camera_frame)" type="str"/>
+      <param name="image_topic" value="$(arg image_topic)" type="str"/>
+      <param name="camera_info_topic" value="$(arg camera_info_topic)" type="str"/>
+      <param name="intrinsics_file" value="$(arg intrinsics_file)" type="str"/>
+      <param name="stereo_result" value="$(arg stereo_result)" type="str"/>
+      <param name="marker_id" value="$(arg marker_id)"/>
+      <param name="marker_size_m" value="$(arg marker_size_m)"/>
+      <param name="max_reprojection_error_px" value="$(arg max_reprojection_error_px)"/>
+    </node>
+
+    <node pkg="piper_eye_to_hand_calibration" type="calibration_server_node.py"
+          name="calibration_server" output="screen" required="true">
+      <param name="camera" value="$(arg camera)" type="str"/>
+      <param name="camera_serial" value="$(arg camera_serial)" type="str"/>
+      <param name="base_frame" value="$(arg base_frame)" type="str"/>
+      <param name="camera_frame" value="$(arg camera_frame)" type="str"/>
+      <param name="camera_link_frame" value="$(arg camera_link_frame)" type="str"/>
+      <param name="robot_pose_topic" value="$(arg robot_pose_topic)" type="str"/>
+      <param name="marker_pose_topic" value="marker_pose" type="str"/>
+      <param name="image_topic" value="$(arg image_topic)" type="str"/>
+      <param name="camera_info_topic" value="$(arg camera_info_topic)" type="str"/>
+      <param name="intrinsics_file" value="$(arg intrinsics_file)" type="str"/>
+      <param name="stereo_result" value="$(arg stereo_result)" type="str"/>
+      <param name="result_dir" value="$(arg result_dir)" type="str"/>
+      <param name="marker_id" value="$(arg marker_id)"/>
+      <param name="marker_size_m" value="$(arg marker_size_m)"/>
+      <param name="min_samples" value="$(arg min_samples)"/>
+      <param name="sync_slop_sec" value="$(arg sync_slop_sec)"/>
+      <param name="max_pair_age_sec" value="$(arg max_pair_age_sec)"/>
+      <param name="stationary_window_sec" value="0.3"/>
+      <param name="stationary_translation_m" value="0.002"/>
+      <param name="stationary_rotation_deg" value="1.0"/>
+      <param name="duplicate_translation_m" value="0.010"/>
+      <param name="duplicate_rotation_deg" value="5.0"/>
+      <param name="translation_rms_limit_m" value="0.010"/>
+      <param name="rotation_rms_limit_deg" value="1.5"/>
+    </node>
+  </group>
+</launch>

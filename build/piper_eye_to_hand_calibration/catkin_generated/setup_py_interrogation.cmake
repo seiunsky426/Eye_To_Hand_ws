@@ -1,0 +1,7 @@
+set(piper_eye_to_hand_calibration_SETUP_PY_SETUP_MODULE "setuptools")
+set(piper_eye_to_hand_calibration_SETUP_PY_VERSION "0.1.0")
+set(piper_eye_to_hand_calibration_SETUP_PY_SCRIPTS "")
+set(piper_eye_to_hand_calibration_SETUP_PY_PACKAGES "piper_eye_to_hand_calibration")
+set(piper_eye_to_hand_calibration_SETUP_PY_PACKAGE_DIRS "src/piper_eye_to_hand_calibration")
+set(piper_eye_to_hand_calibration_SETUP_PY_MODULES "")
+set(piper_eye_to_hand_calibration_SETUP_PY_MODULE_DIRS "")

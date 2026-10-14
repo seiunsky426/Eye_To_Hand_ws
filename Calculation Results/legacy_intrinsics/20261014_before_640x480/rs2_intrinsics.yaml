@@ -1,0 +1,31 @@
+camera: rs2
+camera_serial_number: "261922075819"
+camera_model: Intel RealSense Depth Camera 435
+calibration_time: "2026-09-07T13:08:20.900209790+08:00"
+calibration_target: "chessboard, 8x11 inner corners, 0.025 m square size"
+source_record: /home/zhengsihze/camera_neican/20260907_130820_261922075819.yaml
+image_width: 640
+image_height: 480
+distortion_model: plumb_bob
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [675.38012, 0.0, 314.43645,
+         0.0, 677.18784, 273.80094,
+         0.0, 0.0, 1.0]
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.137102, -0.133573, 0.006502, 0.002448, 0.0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1.0, 0.0, 0.0,
+         0.0, 1.0, 0.0,
+         0.0, 0.0, 1.0]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [697.45494, 0.0, 315.69712, 0.0,
+         0.0, 698.38751, 275.87288, 0.0,
+         0.0, 0.0, 1.0, 0.0]

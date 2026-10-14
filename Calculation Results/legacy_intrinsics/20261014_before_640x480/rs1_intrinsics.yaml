@@ -1,0 +1,47 @@
+image_width: 640
+image_height: 360
+camera_name: rs1_346522071783_640x360
+camera: rs1
+camera_serial_number: '346522071783'
+status: PENDING_VALIDATION
+independently_validated: false
+source_archive: /home/zhengsihze/camera_neican/rs1_346522071783_640x360_20260917T044806Z/calibrationdata.tar.gz
+source_archive_sha256: b81a6600ff68419318b2e3d3906466b6de0680dcf123401a83a8f84421bdd28c
+training_image_count: 17
+training_consistency_check:
+  training_image_count: 17
+  redetected_image_count: 16
+  redetection_failed_images:
+    - left-0016.png
+  fixed_intrinsics_reprojection_rms_px:
+    median: 0.16237089037895203
+    p95: 0.2993140295147896
+    max: 0.3102774918079376
+  scope: training_images_only
+active_intrinsics_changed: true
+publish_tf_allowed: false
+precision_operation_allowed: false
+distortion_model: plumb_bob
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [446.7477, 0.0, 316.69356,
+         0.0, 446.44594, 192.35533,
+         0.0, 0.0, 1.0]
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.079683, -0.131836, 0.000987,
+         0.001098, 0.0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1.0, 0.0, 0.0,
+         0.0, 1.0, 0.0,
+         0.0, 0.0, 1.0]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [449.67235, 0.0, 317.31974, 0.0,
+         0.0, 452.05499, 192.60343, 0.0,
+         0.0, 0.0, 1.0, 0.0]

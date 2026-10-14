@@ -1,0 +1,8 @@
+prefix=/home/zhengsihze/Eye_To_Hand_ws/devel
+
+Name: piper_eye_to_hand_calibration
+Description: Description of piper_eye_to_hand_calibration
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge geometry_msgs message_filters rospy sensor_msgs std_srvs tf tf2_ros

@@ -1,0 +1,8 @@
+<launch>
+  <arg name="directory"/>
+  <node pkg="piper_eye_to_hand_calibration" type="static_tf_publisher_node.py" name="calibration_results_tf" output="screen" required="true">
+    <rosparam param="result_files" subst_value="true">['$(arg directory)/rs1_extrinsics.yaml', '$(arg directory)/rs3_extrinsics.yaml']</rosparam>
+    <rosparam param="expected_cameras">['rs1', 'rs3']</rosparam>
+    <rosparam param="expected_serials">['346522071783', '934222070377']</rosparam>
+  </node>
+</launch>

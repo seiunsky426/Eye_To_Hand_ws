@@ -1,0 +1,10 @@
+<launch>
+  <arg name="rs1_intrinsics"/>
+  <arg name="rs3_intrinsics"/>
+  <arg name="output_directory"/>
+  <node pkg="piper_eye_to_hand_calibration" type="stereo_calibration_node.py" name="stereo_calibration" output="screen" required="true">
+    <param name="rs1_intrinsics" value="$(arg rs1_intrinsics)" type="str"/>
+    <param name="rs3_intrinsics" value="$(arg rs3_intrinsics)" type="str"/>
+    <param name="output_directory" value="$(arg output_directory)" type="str"/>
+  </node>
+</launch>
